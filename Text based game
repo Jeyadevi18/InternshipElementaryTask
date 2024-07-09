@@ -1,0 +1,43 @@
+def start_game():
+    print("Welcome to the Adventure Game!")
+    print("You find yourself in a dark forest. You can go 'left' or 'right'.")
+
+    choice = input("Which way do you want to go? ")
+
+    if choice.lower() == "left":
+        left_path()
+    elif choice.lower() == "right":
+        right_path()
+    else:
+        print("Invalid choice. Please choose 'left' or 'right'.")
+        start_game()
+
+def left_path():
+    print("You walk left and encounter a wild animal.")
+    print("You can 'fight' or 'run'.")
+
+    choice = input("What do you want to do? ")
+
+    if choice.lower() == "fight":
+        print("You bravely fight the animal and win! You continue your journey.")
+    elif choice.lower() == "run":
+        print("You run away safely but miss out on an adventure. Game over.")
+    else:
+        print("Invalid choice. Please choose 'fight' or 'run'.")
+        left_path()
+
+def right_path():
+    print("You walk right and find a treasure chest.")
+    print("You can 'open' it or 'leave' it.")
+
+    choice = input("What do you want to do? ")
+
+    if choice.lower() == "open":
+        print("You open the chest and find a pile of gold! You win!")
+    elif choice.lower() == "leave":
+        print("You leave the chest and continue your journey. Game over.")
+    else:
+        print("Invalid choice. Please choose 'open' or 'leave'.")
+        right_path()
+
+start_game()
